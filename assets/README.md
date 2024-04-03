@@ -1,0 +1,1 @@
+This directory consists of assets such as images and videos used in creating the webpages
