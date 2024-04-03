@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+</head>
+<body style="padding-top: 60px; padding-left: 80px; height: 1000px;">
+    <div style="background-color: black; color: white; position: fixed; top: 0px; left: 0px; right: 0px; height: 50px; z-index: 100;">Header</div>
+    <div style="background-color: green; color: white; position: fixed; top: 50px; left: 0px; bottom: 0px; width: 72px; z-index: 100;">
+        sidebar
+        <div style="position: absolute; color: white; background-color: red; right: 0px; top: 0px; ">X</div>
+    </div>
+    <div style="background-color: lightblue; width: 200px; height: 200px;">div 1</div>
+    <div style="background-color: lightpink; position: relative; width: 200px; height: 200px;">
+        div 2
+        <div style="position: absolute; color: white; background-color: black; right: 10px; bottom: 10px;">
+            5:00
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE orders SYSTEM "orders.dtd">
+<orders>
+    <order id="O111">
+        <name>Mohan</name>
+        <item>LED TV</item>
+        <qty>1</qty>
+        <price>150000</price>
+        <address>
+            <city>Dharwad</city>
+            <state>Karnataka</state>
+            <country>India</country>
+        </address>
+    </order>
+
+    <order id="O555">
+        <name>Vikas</name>
+        <item>Speakers</item>
+        <qty>1</qty>
+        <price>1500</price>
+        <address>
+            <city>Dharwad</city>
+            <state>Karnataka</state>
+            <country>India</country>
+        </address>
+    </order>
+</orders>

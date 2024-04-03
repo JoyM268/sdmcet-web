@@ -1,0 +1,19 @@
+<!ELEMENT sdmcet (branch)>
+<!ELEMENT branch (cse,ise,ec,mech,civil,chemical)>
+<!ELEMENT cse (ug,ugintake,rpgintake,pg)>
+<!ATTLIST cse id CDATA #REQUIRED>
+<!ELEMENT ug (#PCDATA)>
+<!ELEMENT ugintake (#PCDATA)>
+<!ELEMENT rpgintake (#PCDATA)>
+<!ELEMENT pg (#PCDATA)>
+<!ELEMENT ise (ug,ugintake)>
+<!ATTLIST ise id NMTOKEN #REQUIRED>
+<!ELEMENT ec (ugintake,pgintake,ug,pg)>
+<!ATTLIST ec id NMTOKEN #REQUIRED>
+<!ELEMENT pgintake (#PCDATA)>
+<!ELEMENT mech (ugintake,pgintake,ug,pg)>
+<!ATTLIST mech id NMTOKEN #REQUIRED>
+<!ELEMENT civil (ugintake,pgintake,ug,pg)>
+<!ATTLIST civil id NMTOKEN #REQUIRED>
+<!ELEMENT chemical (ugintake,ug)>
+<!ATTLIST chemical id NMTOKEN #REQUIRED>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Branch Details -->
+<!DOCTYPE sdmcet SYSTEM "SDMInfo.dtd">
+<sdmcet>
+    <branch>
+        <cse id="1">
+            <ug>BE</ug>
+            <ugintake>150</ugintake>
+            <rpgintake>18</rpgintake>
+            <pg>MTech</pg>
+        </cse>
+        <ise id="2">
+            <ug>BE</ug>
+            <ugintake>150</ugintake>
+        </ise>
+        <ec id="3">
+            <ugintake>150</ugintake>
+            <pgintake>18</pgintake>
+            <ug>BE</ug>
+            <pg>MTech</pg>
+        </ec>
+        <mech id="4">
+            <ugintake>150</ugintake>
+            <pgintake>18</pgintake>
+            <ug>BE</ug>
+            <pg>MTech</pg>
+        </mech>
+        <civil id="5">
+            <ugintake>60</ugintake>
+            <pgintake>18</pgintake>
+            <ug>BE</ug>
+            <pg>MTech</pg>
+        </civil>
+        <chemical id="6">
+            <ugintake>60</ugintake>
+            <ug>BE</ug>
+        </chemical>
+    </branch>
+</sdmcet>

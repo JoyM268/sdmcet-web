@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 15px;
+
+}
+
+main{
+    height: calc(100vh - 60px);
+    background-color: #f9f9f9;
+    display: flex;
+}
+
+.side-bar{
+    height: 100%;
+    width: 17%;
+    background-color: white;
+    overflow-y: hidden;
+}
+
+@media (max-width: 768px){
+    .side-bar{
+        display: none;
+    }
+}
+
+.left-section{
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    
+}
+
+.left-section #menu-icon{
+    display: flex;
+    height: 25px;
+    align-items: center;
+    cursor: pointer;
+    padding: 0px 9px;
+    margin-right: 6px;
+}
+
+.left-section #yt-logo{
+    height: 23px;
+    cursor: pointer;
+}
+
+.middle-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.middle-section #voice-search{
+    height: 25px;
+}
+
+.search{
+    flex: 1;
+    height: 50px;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    max-width: 600px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+}
+
+.search-bar{
+    flex: 1;
+    padding: 10px;
+    height: 100%;
+    border: none;
+    border-radius: 2px 0 0 2px;
+    font-size: 17px;
+    width: 0px;
+}
+
+.search-bar:focus{
+    outline: none;
+    border: 1px solid #ddd;
+}
+
+.search-bar::placeholder{
+    font-size: 14px;
+}
+
+.search #search-button{
+    height: 100%;
+    cursor: pointer;
+    width: 60px;
+    border: none;
+}
+
+#search-icon{
+    padding-top: 3px;
+    height: 30px;
+}
+
+#voice-search{
+    height: 30px;
+    cursor: pointer;
+}
+
+.right-section{
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.right-section #upload-icon{
+    height: 30px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.right-section #apps-icon{
+    height: 30px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.right-section #notifications-icon{
+    height: 30px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.right-section #pfp-icon{
+    height: 30px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-right: 9px;
+}
+
+.upper-nav{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.nav-link{
+    display: flex;
+    padding: 12px 25px;
+    align-items: center;
+}
+
+.nav-link span{
+    margin-left: 15px;
+}
+
+.nav-link:hover{
+    background: #e5e5e5;
+    cursor: pointer;
+}
+
+.active{
+    background: #e5e5e5;
+}
+
+hr{
+    height: 1px;
+    background-color: #e5e5e5;
+    border: none;
+}
+
+.lower-nav{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.content{
+    background-color: #f9f9f9;
+    width: 100%;
+    height: 100%;
+    padding: 15px 15px;
+    border-top: 1px solid #ddd;
+    overflow-y: scroll;
+}
+
+.videos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+.video {
+    margin-bottom: 30px;
+}
+
+.thumbnail img{
+    width: 100%;
+}
+
+.video-details{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    padding: 6px 3px;
+}
+
+.video-stats a{
+    text-decoration: unset;
+    color: black;
+}
+
+.channel-pfp, .channel-pfp img{
+    width: 40px;
+    border-radius: 25px;
+}
+
+.title{
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 20px;
+}
+
+.channel-name{
+    color: rgb(88, 87, 87);
+    font-size: 12px;
+    margin-bottom: 1px;
+}
+
+.video-views{
+    color: rgb(88, 87, 87);
+    font-size: 12px;
+}

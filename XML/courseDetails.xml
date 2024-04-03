@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csecourses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="courseDetails.xsd">
+    <Title>Web Technology</Title>
+    <credits>3</credits>
+    <maxmarks>100</maxmarks>
+</csecourses>

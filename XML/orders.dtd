@@ -1,0 +1,11 @@
+<!ELEMENT orders (order+)>
+<!ELEMENT order (name,item,qty,price,address)>
+<!ATTLIST order id CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT item (#PCDATA)>
+<!ELEMENT qty (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT address (city,state,country)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT country (#PCDATA)>

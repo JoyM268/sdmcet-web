@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up page</title>
+</head>
+<body>
+    <form action="SignupDetails.php" method="post">
+        <fieldset>
+            <legend>Sign-Up Page</legend>
+            <table>
+                <tr>
+                    <td><label>Enter name: </label></td>
+                    <td><input type="text" name="txtname"></td>
+                </tr>
+                <tr>
+                    <td><label>Enter phone number: </label></td>
+                    <td><input type="number" name="txtnumber"></td>
+                </tr>
+                <tr>
+                    <td><label>Gender: </label></td>
+                    <td><input type="radio" name="rdgender">Male</td>
+                    <td><input type="radio" name="rdgender">Female</td>
+                </tr>
+                <tr>
+                    <td><label>Address: </label></td>
+                    <td><textarea name="txtareaAddress"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label name="state">State: </label></td>
+                    <td>
+                        <select>
+                            <option value="0">--Select State--</option>
+                            <option value="1">Karnataka</option>
+                            <option value="2">Delhi</option>
+                            <option value="3">Maharashtra</option>
+                            <option value="4">UP</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Select your Language</label></td>
+                    <td><input type="checkbox" name="chk_Kann">Kannada</td>
+                    <td><input type="checkbox" name="chk_Eng">English</td>
+                    <td><input type="checkbox" name="chk_Hindi">Hindi</td>
+                </tr>    
+                <tr>
+                    <td><input type="submit" value="Submit"></td>
+                    <td><input type="reset" value="Clear"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>

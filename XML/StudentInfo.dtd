@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT Students (student+)>
+<!ELEMENT student (name,usn,branch,semester,cgpa)>
+<!ATTLIST student rollno CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT usn (#PCDATA)>
+<!ELEMENT branch (#PCDATA)>
+<!ELEMENT semester (#PCDATA)>
+<!ELEMENT cgpa (#PCDATA)>
