@@ -1,0 +1,1 @@
+This directory contains all the XML programs that were taught in Web Technology class at SDMCET along with their DTD and XSD files for validation

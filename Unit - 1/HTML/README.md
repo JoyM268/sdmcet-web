@@ -1,0 +1,1 @@
+This directory contains the collection of all the HTML programs that were taught in the Web Technology class of SDMCET
