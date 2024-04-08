@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Student Details -->
-<!DOCTYPE Students SYSTEM "StudentInfo.dtd">
-<Students>
+<!-- Student Details, validation using XSD -->
+<Students xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="StudentInfo.xsd">
   <student rollno="111">
     <name>Mohan M</name>
     <usn>2SD12CS020</usn>
@@ -10,7 +9,15 @@
     <cgpa>6.98</cgpa>
   </student>
   
-  <student rollno="112">
+  <student rollno="222">
+    <name>Vikas V</name>
+    <usn>2SD12CS018</usn>
+    <branch>CSE</branch>
+    <semester>3</semester>
+    <cgpa>9.98</cgpa>
+  </student>
+
+  <student rollno="333">
     <name>Murli M</name>
     <usn>2SD12CS080</usn>
     <branch>CSE</branch>

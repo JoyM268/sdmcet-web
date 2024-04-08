@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Students">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="student" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" type="xs:string"></xs:element>
+              <xs:element name="usn" type="xs:string"></xs:element>
+              <xs:element name="branch" type="xs:string"></xs:element>
+              <xs:element name="semester" type="xs:string"></xs:element>
+              <xs:element name="cgpa" type="xs:decimal"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="rollno" type="xs:integer" use="required"></xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

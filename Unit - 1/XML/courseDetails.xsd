@@ -3,9 +3,9 @@
     <xs:element name="csecourses">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="Title" type="xs:string" />
-                <xs:element name="credits" type="xs:integer" />
-                <xs:element name="maxmarks" type="xs:integer" />
+                <xs:element name="Title" type="xs:string"></xs:element>
+                <xs:element name="credits" type="xs:integer"></xs:element>
+                <xs:element name="maxmarks" type="xs:integer"></xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
