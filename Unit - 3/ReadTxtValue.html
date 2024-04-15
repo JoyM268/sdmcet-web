@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reading textbox value</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Read textbox value example</legend>
+        <table>
+            <tr>
+                <td><label>Enter the Name: </label></td>
+                <td><input type="text" id="txtname" name="textname" placeholder="Enter your name"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Submit" onclick="readText()"></td>
+                <!-- <td><button onclick="readText()">Submit</button></td> -->
+            </tr>
+        </table>
+    </fieldset>
+    <span id="displaytxt"></span>
+</body>
+</html>
+<script type="text/javascript">
+    function readText(){
+        var inputValue = document.getElementById("txtname").value;
+        //document.write("The textbox value is: " + "<b><u>" + inputValue + "</u></b>");
+        //document.getElementById("displaytxt").innerText = inputValue;
+        document.getElementById("displaytxt").innerHTML = "The textbox value is: " + "<b>" +  inputValue + "</b>";
+    }
+</script>
