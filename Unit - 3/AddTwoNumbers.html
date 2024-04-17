@@ -1,0 +1,39 @@
+<!-- Webpage to add two numbers -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Web Based Simple Calculator</title>
+    <script src="AddTwoNumbers.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend>Simple Calculator</legend>
+        <table>
+            <tr>
+                <td><label>Enter the first number</label></td>
+                <td><input type="text" id="txtnum1" placeholder="Enter the first number"></td>
+            </tr>
+            <tr>
+                <td><label>Enter the second number</label></td>
+                <td><input type="text" id="txtnum2" placeholder="Enter the second number"></td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2"><input type="button" value="Add Numbers" onclick="addTwoNumbers()"></td>
+            </tr>
+        </table>
+        <span id="displayresult"></span>
+    </fieldset>
+</body>
+<!-- <script type="text/javascript">
+    function addTwoNumbers(){
+        var num1 = document.getElementById("txtnum1").value;
+        var num2 = document.getElementById("txtnum2").value;
+        if(num1 != "" && num2 != ""){
+            var result = parseInt(num1) + parseInt(num2);
+            document.getElementById("displayresult").innerText = result;
+        }else{
+            alert("Invalid input");
+        }
+    }
+</script> -->
+</html>
