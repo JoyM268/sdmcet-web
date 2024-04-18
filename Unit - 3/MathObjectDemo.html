@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Math Object Example</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Math object example</legend>
+        <table>
+            <tr>
+                <td><label>Enter the value of x:</label></td>
+                <td><input type="text" id="txt_Xvalue" placeholder="Enter the value of x"></td>
+            </tr>
+            <tr>
+                <td><label>Enter the value of n:</label></td>
+                <td><input type="text" id="txt_Nvalue" placeholder="Enter the value of n"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><button onclick="findX_N_value()">Evaluate</button></td>
+            </tr>
+        </table>
+    </fieldset>
+    <p id="result"></p>
+</body>
+<script type="text/javascript">
+    function findX_N_value(){
+        var xValue = document.getElementById("txt_Xvalue").value;
+        var nValue = document.getElementById("txt_Nvalue").value;
+        if(xValue != "" && nValue != ""){
+            var resultValue = Math.pow(parseInt(xValue), parseInt(nValue));
+            document.getElementById("result").innerHTML = "<b>" + resultValue + "</b>";
+        }else{
+            alert("Please enter the value of x and n!!");
+        }
+    }
+</script>
+</html>

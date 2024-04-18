@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign-In Page</title>
+</head>
+<body>
+    <form method="post">
+        <fieldset>
+            <legend>Login Page</legend>
+            <table>
+                <tr>
+                    <td><label>Enter username: </label></td>
+                    <td><input type="text" name="txtname" id="txtusrname"></td>
+                </tr>
+                <tr>
+                    <td><label>Enter password: </label></td>
+                    <td><input type="password" name="txtpass" id="txtpwd"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Submit" onclick="validateLoginDetails()"></td>
+                    <td><input type="reset" value="Clear"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><a href="../Unit - 1/HTML/LoginDetails.html">Sign-Up</a></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+<script type="text/javascript">
+    function validateLoginDetails(){
+        var usrName = document.getElementById("txtusrname").value;
+        var usrPwd = document.getElementById("txtpwd").value;
+        if(usrName != "" && usrPwd != ""){
+            if(usrName == "Sdmcet" && usrPwd == "web"){
+                window.location = "../Unit - 1/HTML/MainPageFrames.html";
+            }else{
+                alert("Please verify the User name or Password");
+            }
+        }else{
+            alert("Please enter the values of User name and Password");
+        }
+    }
+</script>
+</html>
