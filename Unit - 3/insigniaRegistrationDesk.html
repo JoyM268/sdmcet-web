@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>How to read different web components</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Js to read different GUI component</legend>
+        <table>
+            <tr>
+                <td><label>Select Event type:</label></td>
+                <td>                
+                    <select id="dd1eventsname">
+                        <option>-Select Events-</option>
+                        <option>Centeral level event</option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Is registration fees paid:</label></td>
+                <td>         
+                    <input type="radio" name="rdfees" value="Yes">Yes
+                    <input type="radio" name="rdfees" value="No">No
+                </td>
+            </tr>
+            <tr>
+                <td><label>Select events:</label></td>
+                <td>         
+                    <input type="checkbox" name="chkevents" value="event-1">Event - 1
+                    <input type="checkbox" name="chkevents" value="event-2">Event - 2
+                </td>
+            </tr>
+            <tr>
+                <td><label>Select event Date:</label></td>
+                <td><input type="date" id="eventDate"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="button" value="Register" onclick="registerEvents()"></td>
+            </tr>
+        </table>
+        <span id="result"></span>
+    </fieldset>
+    <script type="text/javascript">
+        var rdFeesPaid = null;
+        var chkeventsType = ""; 
+        function registerEvents(){
+            //Read dropdownList selected value
+            var ddl_events = document.getElementById("dd1eventsname").value;
+
+            //Read radio button selected value
+            var rdbtnValues = document.getElementsByName("rdfees"); 
+            for(var i = 0; i < rdbtnValues.length; i++){
+                if(rdbtnValues[i].checked){
+                    rdFeesPaid = rdbtnValues[i].value;
+                }
+            }
+        
+            //Read checkbox slected values
+            var chkevents = document.getElementsByName("chkevents");
+            for(var j = 0; j < chkevents.length; j++){
+                if(chkevents[j].checked){
+                    chkeventsType += chkevents[j].value + " ";
+                }
+            }
+            var eventdate = document.getElementById("eventDate").value;
+            document.getElementById("result").innerHTML = "<table border=\"1\"><tr><th>Event Type</th><th>Fees Paid</th><th>Events</th><th>Event Date</th></tr><tr><td>" + ddl_events + "</td><td>" + rdFeesPaid +"</td><td>" + chkeventsType + "</td><td>" + eventdate + "</td></tr></table>";
+        }
+    </script>
+</body>
+</html>

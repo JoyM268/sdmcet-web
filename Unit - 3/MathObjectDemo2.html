@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Math object demo</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Math object demo</legend>
+        <tabel>
+            <tr>
+                <td><label>Enter the number:</label></td>
+                <td><input type="text" id="txtNumber"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Compute" onclick="Evaluate();"></td>
+            </tr>
+        </tabel>
+    </fieldset>
+    <span id="displayResult"></span>
+</body>
+<script type="text/javascript">
+    function Evaluate() {
+        var inputVal = parseInt(document.getElementById("txtNumber").value);
+        var result = Math.pow(2, inputVal);
+        document.getElementById("displayResult").innerText = "The power value of 2 is: " + result;
+
+    }
+</script>
+
+</html>
