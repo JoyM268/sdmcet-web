@@ -1,3 +1,4 @@
+<!-- Program to demonstrate reading values from different web components -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,6 +65,8 @@
                     chkeventsType += chkevents[j].value + " ";
                 }
             }
+
+            //Read date values
             var eventdate = document.getElementById("eventDate").value;
             document.getElementById("result").innerHTML = "<table border=\"1\"><tr><th>Event Type</th><th>Fees Paid</th><th>Events</th><th>Event Date</th></tr><tr><td>" + ddl_events + "</td><td>" + rdFeesPaid +"</td><td>" + chkeventsType + "</td><td>" + eventdate + "</td></tr></table>";
         }
