@@ -1,0 +1,28 @@
+<!--
+    Create A web page HTML markup to list all undergraduate(UG) courses offered by SDMCET College in a dropdown GUI component. 
+    Use Javasript to validate the web page and display the selected courses on an alert window.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SDMCET College Undergraduate Courses</title>
+</head>
+<body>
+    <h3>Select an Undergraduate Course:</h3>
+    <select id="courseDropdown">
+        <option>-Select-</option>
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+        <option value="ISE">ISE</option>
+        <option value="AIML">AIML</option>
+    </select>
+    <input type="submit" value="Submit" onclick="submitAlert()">
+</body>
+<script type="text/javascript">
+    function submitAlert() {
+        var selectedCourse = document.getElementById("courseDropdown").value;
+        alert("You have selected: " + selectedCourse);
+    }
+</script>
+</html>

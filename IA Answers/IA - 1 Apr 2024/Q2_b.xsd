@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Write an XML Schema defination(XSD) to validate the following XML document
+<?xml version="1.0" encoding="UTF-8"?>
+<inventory>
+    <product id="E0111">
+        <name>Laptop</name>
+        <category>Electronics</category>
+        <price>89000</price>
+        <stock>
+            <location>Warehouse</location>
+            <quantity>30</quantity>
+        </stock>
+    </product>
+</inventory>
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="inventory">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"></xs:element>
+                            <xs:element name="category" type="xs:string"></xs:element>
+                            <xs:element name="price" type="xs:integer"></xs:element>
+                            <xs:element name="stock">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="location" type="xs:string"></xs:element>
+                                        <xs:element name="quantity" type="xs:integer"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
