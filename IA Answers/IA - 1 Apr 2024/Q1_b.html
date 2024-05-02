@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Fruits Mart</legend>
+        <table>
+            <tr>
+                <td><label>Apple (200 Per kg)</label></td>
+                <td><input type="checkbox" name="chkfruits" value="200"></td>
+            </tr>
+            <tr>
+                <td><label>Orange (180 Per kg)</label></td>
+                <td><input type="checkbox" name="chkfruits" value="180"></td>
+            </tr>
+            <tr>
+                <td><label>Bannana (80 Per kg)</label></td>
+                <td><input type="checkbox" name="chkfruits" value="80"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="Purchase" onclick="computeAmount()">
+                    <!-- <input type="submit" value="Purchase" onclick="computeAmount()"> -->
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+</html>
+<script type="text/javascript">
+    var subtotal = 0;
+    function computeAmount(){
+        var selectedItem = document.getElementsByName("chkfruits");
+        for(var i = 0; i < selectedItem.length; i++){
+            if(selectedItem[i].checked){
+                subtotal += parseInt(selectedItem[i].value);
+            }
+        }
+        var taxamount = parseFloat((subtotal*10)/100);
+        var totalAmount = subtotal - taxamount;
+        alert("Total cost of purchased items is Rs: " + totalAmount); 
+    }
+</script>
