@@ -1,3 +1,11 @@
+<!--
+    Develop an HTML web page featuring checkboxes to display various items such as
+    apple (Rs. 200 per kg), orange(Rs. 180 per kg), and bannana(Rs. 80 per kg), alongside
+    a button. Upon clicking the button, the page is expected to prowpt a confirmation
+    window displaying the message 'Your total cost is Rs.xyz', where 'xyz' denites the total
+    cost of selected fruits, inclusive of a 10% sales tax. Ensure all GUI on the we page are 
+    properly aligned using suitable HTML elements.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +48,6 @@
         }
         var taxamount = parseFloat((subtotal*10)/100);
         var totalAmount = subtotal - taxamount;
-        alert("Total cost of purchased items is Rs: " + totalAmount); 
+        confirm("Your total cost is Rs." + totalAmount); 
     }
 </script>
