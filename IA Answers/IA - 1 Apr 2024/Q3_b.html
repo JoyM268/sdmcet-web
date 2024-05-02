@@ -11,7 +11,7 @@
 <body>
     <h3>Select an Undergraduate Course:</h3>
     <select id="courseDropdown">
-        <option>-Select-</option>
+        <option value="">-Select-</option>
         <option value="CSE">CSE</option>
         <option value="ECE">ECE</option>
         <option value="ISE">ISE</option>
@@ -22,7 +22,11 @@
 <script type="text/javascript">
     function submitAlert() {
         var selectedCourse = document.getElementById("courseDropdown").value;
-        alert("You have selected: " + selectedCourse);
+        if(selectedCourse == ""){
+            alert("Please select a course");
+        }else{
+            alert("You have selected: " + selectedCourse);
+        }
     }
 </script>
 </html>
