@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event handling in JS</title>
+</head>
+<body>
+    <h2>Mouse and Keyboard event handling examples</h2>
+    <div id="divText" onmouseover="applycolor();" onmouseout="changecolor();">
+        <span>Computer Science and Engineering Department</span>
+    </div>
+    <hr>
+    <img src="../assets/SDMCET_Logo.png" width="250px" id="myImg" onmouseover="updateImg();" onmouseout="changeImg();">
+</body>
+<script type="text/javascript">
+    function applycolor(){
+        //document.getElementById("divText").style.color = "Blue";
+        document.getElementById("divText").innerText = "SDM College of Engineering and Technology";
+    }
+
+    function changecolor(){
+        document.getElementById("divText").style.color = "Red";
+    }
+
+    function updateImg(){
+        document.getElementById("myImg").src = "../assets/cat.img";
+    }
+
+    function changeImg(){
+        document.getElementById("myImg").src = "../assets/SDMCET_Logo.png";
+    }
+</script>
+</html>

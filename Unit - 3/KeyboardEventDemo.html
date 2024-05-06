@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Keyboard event</title>
+</head>
+<body>
+    <label>Enter the String:</label>
+    <input type="text" id="textstring" onkeyup="computeLengthOfTheString(); "><br>
+    <span id="strlen"></span>
+</body>
+<script type="text/javascript">
+    function computeLengthOfTheString(){
+        var str = document.getElementById("textstring").value;
+        document.getElementById("strlen").innerHTML = "The length of the given string is: " + "<b>" + str.length + "</b>";
+    }
+</script>
+</html>
