@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation JS Examples</title>
+</head>
+<body>
+    <center>
+        <h3>Reading return value of confirm function in JS</h3>
+        <button onclick="CheckReturnValue();">Read Values</button>
+    </center>
+</body>
+<script type="text/javascript">
+    function CheckReturnValue(){
+        var returnVal = confirm("Do you want to continue!!!!");
+        if(returnVal === true)
+            window.location = "../Unit - 1/HTML/CSEwebpage.html";
+        else
+            window.location = "../Unit - 1/HTML/ColorProperty.html";
+    }
+</script>
+</html>

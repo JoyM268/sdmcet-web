@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Submission with JS</title>
+</head>
+<body>
+    <form onsubmit="callJSFunction()">
+        <label>Enter the value:</label>
+        <input type="text" name="txtinput" id="txtinput"><br>
+       <!-- <input type="submit" name="btnsubmit" value="SendData" onclick="callJSFunction()"> -->
+       <input type="submit" name="btnsubmit" value="SendData">
+    </form>
+</body> 
+<script type="text/javascript">
+    function callJSFunction(){
+        var txtvalue = document.getElementById("txtinput").value;
+        alert("Element value is: " + txtvalue);
+    }
+</script>
+</html>

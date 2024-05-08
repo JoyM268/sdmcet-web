@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>This keyword in JS</title>
+</head>
+<body>
+    <form>
+        <center>
+            <h3>This keyword in Javascript</h3>
+            <label>Enter the College Name:</label>
+            <input type="text" name="txtname" id="txtname"><br>
+            <input type="button" value="Display" onclick="readDisplaytxtValue(this.form)">
+        </center>
+    </form>
+    <span id="displayMsg"></span>
+</body>
+<script type="text/javascript">
+    function readDisplaytxtValue(frmData){
+        document.getElementById("displayMsg").innerHTML = "The Entered name is: " + frmData.txtname.value;
+    }
+</script>
+</html>

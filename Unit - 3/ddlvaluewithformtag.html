@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown component with Form Element</title>
+</head>
+<body>
+    <form>
+        <center>
+            <label>Select Branch:</label>
+            <select name="ddlbranch">
+                <option value="0">--Select the Branch</option>
+                <option value="1">Computer Science</option>
+                <option value="2">Civil Engineering</option>
+                <option value="3">Information Science</option>
+            </select>
+            <input type="button" value="Display" onclick="readSelectedVal(this.form);">
+        </center>
+    </form>
+        <p id="selectedText"></p>
+</body>
+<script type="text/javascript">
+    function readSelectedVal(frm){
+        for(var i = 0; i < frm.ddlbranch.length; i++){
+            if(frm.ddlbranch[i].selected){
+                document.getElementById("selectedText").innerHTML = "The Selected Value is: " + frm.ddlbranch[i].text;
+            }
+        }
+    }
+</script>
+</html>
