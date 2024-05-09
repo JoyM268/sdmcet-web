@@ -26,17 +26,26 @@
                 </tr>
             </table>
         </fieldset>
-    </form>
+    </form> 
 </body>
 <script type="text/javascript">
     function validateLoginDetails(){
         var usrName = document.getElementById("txtusrname").value;
         var usrPwd = document.getElementById("txtpwd").value;
+        var pattern = /[a-zA-Z]/;   //Input should contain A-Z or a-z
+        var pattern2 = /^abc/; //Input should start with abc
+        var pattern3 = /cse$/; //Input should end with cse
+        var pattern4 = /[0-9]/; //Input should contain 0-9
+        var regobj = new RegExp("Web"); //Using objects constructor
         if(usrName != "" && usrPwd != ""){
-            if(usrName == "Sdmcet" && usrPwd == "web"){
-                window.location = "../Unit - 1/HTML/MainPageFrames.html";
+            if(usrName.match(pattern) && usrPwd.match(pattern)){
+                if(usrName == "Sdmcet" && usrPwd == "web"){
+                    window.location = "../Unit - 1/HTML/MainPageFrames.html";
+                }else{  
+                    alert("Please verify the User name or Password");
+                }
             }else{
-                alert("Please verify the User name or Password");
+                alert("Please verify input values!!!");
             }
         }else{
             alert("Please enter the values of User name and Password");
