@@ -1,0 +1,46 @@
+<!-- Webpage to demonstrate adding and printing values in array -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array with Push function</title>
+</head>
+<body>
+    <center>
+        <label>Enter the college Name:</label>
+        <input type="text" id="txtcollegename"><br>
+        <input type="button" value="Insert" onclick="SaveValues();">
+        <input type="button" value="Display" onclick="ReadValues();"><br/>
+        <span id="collegeNames"></span>
+    </center>
+</body>
+<script type="text/javascript">
+    var collegeDatabase = []
+    function SaveValues(){
+        //Read or fetch GUI values
+        var txtvalue = document.getElementById("txtcollegename").value;
+    
+        //document.write(txtvalue.toUpperCase()); //returns string converted to uppercase
+        //document.write(txtvalue.toLowerCase()); //returns string converted to lowercase
+
+        //Insert textbox value to array object
+        if(txtvalue != ""){
+            collegeDatabase.push(txtvalue);
+            document.getElementById("txtcollegename").value = "";
+            alert("Record is created successfully!!!!!");
+        }else{
+            alert("Enter thee college name!!!!");
+        }
+    }
+
+    function ReadValues(){
+        var databaselen = collegeDatabase.length;
+        if(databaselen > 0){
+            for(var i = 0; i < collegeDatabase.length; i++){
+                document.getElementById("collegeNames").innerHTML += collegeDatabase[i] + "<br/>";
+            }
+        }else{
+            alert("Record not found!!!!");
+        }
+    }
+</script>
+</html>
