@@ -40,4 +40,55 @@
     for($i = 0; $i < count($Num_Array); $i++){
         echo $Num_Array[$i]."<br/>";
     }
+    echo "<hr>";
+
+    //Multidimensional arrays in PHP
+    echo "Multidimensional arrays in PHP<br/>";
+    $Mul_array = array(array(11, 22, 33, 44), array("sdm", "sdmit", "sdmh", "sdmc"), array('s', 'd', 'm', 'c'));
+    echo "The output of the array is: ".$Mul_array[2][2]."<br/>";
+    print_r($Mul_array);
+    echo "<br/>";
+
+    //Printing multidimensional array using for loop
+    for($row = 0; $row < count($Mul_array); $row++){
+        for($col = 0; $col < count($Mul_array[$row]); $col++)
+            echo $Mul_array[$row][$col]." ";
+        echo "<br>";
+    }
+    echo "<hr>";
+    //Associative arrays in PHP
+    echo "Associative arrays in PHP:<br/>";
+    $assoc_arrObj = ["Name" => "SDMCET", "CollegeCode" => "2SD", "Intake" => "160"];
+    foreach ($assoc_arrObj as $k => $v){
+        echo $k.": ".$v."<br/>";
+    }
+    echo "<hr>";
+    echo "Built-in functions in PHP<br/>";
+    //Returns array of keys
+    print_r(array_keys($assoc_arrObj));
+
+    echo"<br/>";
+    //returns merged array
+    print_r(array_merge($Num_Array, $assoc_arrObj));
+
+    //Add element in array and returns the length of array
+    array_push($Num_Array, 50);
+    echo "<br/>After pushing new element: ";
+    foreach ($Num_Array as $val) {
+        echo $val." ";
+    }
+
+    //Pops element from array and returns the popped element
+    echo "<br>After poping array element: ";
+    print_r(array_pop($Num_Array));
+    echo "<br/>";
+    print_r($Num_Array);
+
+    //Returns sum of all elements
+    echo "<br>Sum of all elements in array is: ".array_sum($Num_Array);
+
+    //Returns a reversed array
+    echo "<br>Array in reverse order: ";
+    print_r(array_reverse($Num_Array));
+    
 ?>
