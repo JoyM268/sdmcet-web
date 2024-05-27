@@ -1,0 +1,49 @@
+<!-- Program to demonstrate reading values from different web components -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>How to read different web components</title>
+</head>
+<body>
+    <form action="EventRegistration.php" method="POST">
+        <fieldset>
+            <legend>Js to read different GUI component</legend>
+            <table>
+                <tr>
+                    <td><label>Select Event type:</label></td>
+                    <td>                
+                        <select name="dd1eventsname">
+                            <option>-Select Events-</option>
+                            <option value="central-event">Centeral level event</option>
+                            <option value="dept-event">Department level event</option>
+                            <option value="cultural-event">Cultural events</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Is registration fees paid:</label></td>
+                    <td>         
+                        <input type="radio" name="rdfees" value="Yes">Yes
+                        <input type="radio" name="rdfees" value="No">No
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Select events:</label></td>
+                    <td>         
+                        <input type="checkbox" name="chkevents[]" value="Event - 1">Event - 1
+                        <input type="checkbox" name="chkevents[]" value="Event - 2">Event - 2
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Select event Date:</label></td>
+                    <td><input type="date" name="eventDate"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="Register"></td>
+                </tr>
+            </table>
+            <span id="result"></span>
+        </fieldset>
+    </form>
+</body>
+</html>
