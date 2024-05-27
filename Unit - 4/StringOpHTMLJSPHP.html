@@ -1,0 +1,39 @@
+<!-- Validation using HTML, JS, PHP -->
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <form action="StringOperations.php" method="post" onsubmit="return StringOperations()">
+        <table>
+            <tr>
+                <td><label>Enter the first string:</label></td>
+                <td><input type="text" name="txtstr1" id="txtstr1"></td>
+            </tr>
+            <tr>
+                <td><label>Enter the second string:</label></td>
+                <td><input type="text" name="txtstr2" id="txtstr2"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="btnsubmit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>    
+</body>
+<script type="text/javascript">
+    function StringOperations() {
+        var s1 = document.getElementById("txtstr1").value;
+        var s2 = document.getElementById("txtstr2").value;
+        var patrn = /^[a-zA-Z]*$/;
+        if(s1 != "" && s2 != ""){
+            if(s1.match(patrn) && s2.match(patrn)){
+                return true;
+            }else{
+                alert("***Enter the correct data***");
+                return false;
+            }
+        }else{
+            alert("***Enter the missing data***")
+            return false;
+        }
+    }
+</script>
+</html>
