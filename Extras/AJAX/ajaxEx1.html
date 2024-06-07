@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Example 1</title>
+</head>
+<body>
+    <input type="text" onkeyup="search(this.value)"><br>
+    <div id="result"></div>
+</body>
+<script>
+    function search(text){
+        var result = document.getElementById("result");
+        if(text == ""){
+            result.innerText = "";
+        }else{
+            var xhtml = new XMLHttpRequest();
+            xhtml.onreadystatechange = function(){
+                if(xhtml.status == 200 && xhtml.readyState == 4){
+                    result.innerHTML = xhtml.responseText;
+                }
+            }
+            xhtml.open("GET", "ajaxEx1.php?q=" + text, true);
+            xhtml.send();
+        }
+    } 
+</script>
+</html>
