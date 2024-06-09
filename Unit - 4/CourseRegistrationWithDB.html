@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Student Form</title>
+</head>
+
+<body>
+    <form action="CourseRegistrationWithDB.php" method="POST">
+        <fieldset>
+            <legend>Course Registration form</legend>
+            <table>
+                <tr>
+                    <td><label>Enter the student Name:</label></td>
+                    <td><input type="text" id="txtname" name="txtname" placeholder="Enter student name"></td>
+                </tr>
+                <tr>
+                    <td><label>Enter the student USN:</label></td>
+                    <td>
+                        <select name="ddl_usn">
+                            <option>-Select USN-</option>
+                            <option>2SD21CS003</option>
+                            <option>2SD21CS005</option>
+                            <option>2SD21CS008</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Select Division:</label></td>
+                    <td>
+                        <input type="radio" name="rddivision" value="A-Division">A-Division
+                        <input type="radio" name="rddivision" value="B-Division">B-Division
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Select Courses:</label></td>
+                    <td>
+                        <input type="checkbox" name="chkcourses[]" value="Web Technology">Web Technology
+                        <input type="checkbox" name="chkcourses[]" value="Advanced Java">Advanced Java
+                        <input type="checkbox" name="chkcourses[]" value="Python programming">Python programming
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Enter registration Date:</label></td>
+                    <td><input type="date" id="dtregistration" name="dtregistration"></td>
+                </tr>
+                <tr>
+                    <td><label>Select CRUD Operation Type:</label></td>
+                    <td>
+                        <select name="ddlCRUDOp">
+                            <option>-Select Operation Type-</option>
+                            <option>Create/Insert</option>
+                            <option>Read/Display</option>
+                            <option>Update</option>
+                            <option>Delete</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" name="btnsubmit" value="Submit"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    <span id="displayResult"></span>
+</body>
+
+</html>

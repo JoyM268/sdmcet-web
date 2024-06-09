@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+
+<body>
+    <form action="Login.php" method="post" onsubmit="return validateLogindetails();">
+        <fieldset>
+            <legend>User Login</legend>
+            <table>
+                <tr>
+                    <td><label>User Name:</label></td>
+                    <td><input type="text" name="txtusername" id="txtusrname"></td>
+                </tr>
+                <tr>
+                    <td><label>Password:</label></td>
+                    <td><input type="password" name="txtpassword" id="txtpwd"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="btnsubmit" value="Login"></td>
+                    <td><input type="reset" value="clear" name="btnclear"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><a href="Signup_page.html">Sign Up</a></td>
+                </tr>
+            </table>
+        </fieldset>
+
+    </form>
+</body>
+<script type="text/javascript">
+    function validateLogindetails() {
+        //Read textbox values
+        var usrName = document.getElementById("txtusrname").value;
+        var usrpwd = document.getElementById("txtpwd").value;
+
+        var pattrn1 = /^[a-zA-Z]*$/;
+        var pattrn2 = /[0-9]/;
+        var regobj = new RegExp("sdm");
+
+        // if(regobj.test(usrName)){
+        //     alert("VALID DATA");
+        // }
+        // else{
+        //     alert("INVALID DATA!!!!");
+        // }
+
+        //validate user name and password
+        if ((usrName === "") && (usrpwd === "")) {
+            alert("Please enter the input!!!!!!");
+            return false;
+        }
+        else {
+            if ((usrName.match(pattrn1)) && (usrpwd.match(pattrn1))) {
+                // if(usrName == "Sdmcet" && usrpwd == "CSE")
+                // {
+                //window.location = "FramesMenu.html";
+                return true;
+                // }
+                // else
+                // {
+                //     alert("Invalid login details!!!");
+                //     return false;
+                // }
+            }
+            else {
+                alert("Invalid login credentials!!!!");
+                return false;
+            }
+
+        }
+    }
+</script>
+
+</html>
