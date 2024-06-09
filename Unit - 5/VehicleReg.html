@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Reading three Internal Marks</title>
+</head>
+<body>
+    <script language="javascript" type="text/javascript">
+        function Sendrequest() {
+            var txtRegVal = document.getElementById("txtRegNo").value;
+            var btnsubmit = document.getElementById("btnsubmit").value;
+
+            var xmlhttp;
+
+            if (window.XMLHttpRequest) {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            }
+            else {
+                // code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+                    document.getElementById("responselbl").innerHTML = xmlhttp.responseText;
+
+                }
+            }
+
+            xmlhttp.open("GET", "VehicleReg.php?VehicleRegVal=" + txtRegVal + "&btnsubmit=" + btnsubmit, true);
+            xmlhttp.send();
+            document.getElementById("txtRegNo").value = "";
+        }
+    </script>
+    <form action="VehicleReg.php" method="get">
+        <fieldset>
+            <legend>Vehicle Information</legend>
+            <label>Enter Vehicle Registration Number:</label>
+            <input type="text" id="txtRegNo" name="txtRegNO"></br>
+            <input type="button" value="Submit" id="btnsubmit" name="btnsubmit" onclick="Sendrequest();">
+        </fieldset>
+    </form>
+    <div id="responselbl"></div>
+</body>
+</html>
