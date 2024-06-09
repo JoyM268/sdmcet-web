@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calcuator</title>
+</head>
+
+<body>
+    <form action="FirstNnaturalNumber.php" method="POST" onSubmit="return ValidateData();">
+        <center>
+            <h3>Calcuator</h3>
+            <label>Enter the N value:</label>
+            <input type="text" name="txtnumber" id="txtnumber">
+            <input type="submit" name="btnsubmit" value="Compute">
+        </center>
+    </form>
+</body>
+<script type="text/javascript">
+    function ValidateData() {
+        var num = document.getElementById("txtnumber").value;
+        var numpatrn = /^[0-9]*$/;
+        if (num != "") {
+            if (num.match(numpatrn)) {
+                return true;
+            }
+            else {
+                alert("Enter the number!!!!");
+                return false;
+            }
+        }
+        else {
+            alert("Enter the missing value!!!!!")
+            return false;
+        }
+    }
+</script>
+
+</html>
