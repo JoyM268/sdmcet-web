@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinner</title>
+    <style>
+        html{
+            height: 100%;
+        }
+
+        body{
+            height: 100%;
+            display: flex;    
+            justify-content: center;
+            align-items: center;
+        }
+
+        .spinner{   
+            background-color: rgb(255, 255, 255);
+            height: 50px;
+            width: 50px;
+            border-width: 7px;
+            border-radius: 50%;
+            border-color: gray;
+            border-style: solid;
+            border-top-color: blue;
+            border-top-style: solid;
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes rotate {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="spinner"></div>
+</body>
+</html>

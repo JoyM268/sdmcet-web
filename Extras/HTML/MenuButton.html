@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Butoon</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #menu{
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            padding: 14px;
+            padding-right: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        #first{
+            background-color: white;
+            width: 37px;
+            height: 5px;
+            margin-bottom: 10px;
+            transition: transform 0.1s ease-in-out;
+        }
+
+        #second{
+            background-color: white;
+            transition: transform 0.5s ease-in-out;
+            height: 5px;
+            width: 37px;
+            margin-bottom: 10px;
+        }
+
+        #third{
+            background-color: white;
+            width: 37px;
+            transition: transform 0.1s ease-in-out;
+            height: 5px;
+        }
+
+        .show{
+            padding-left: 50px;
+            padding-right: 5px;
+        }
+
+        .show1{
+            width:97%;
+            position: absolute;
+            right: 20px;
+            top: 30px;
+            left: 10px;
+            transform: rotate(45deg);
+        }
+
+        .show2{
+            display: none;
+        }
+
+        .show3{
+            width:97%;
+            top: 30px;
+            left: 10px;
+            right: 35px;
+            position: absolute;
+            transform: rotate(-45deg);
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="menu" class="show" onclick="menuClick()">
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+    </div>
+</body>
+<script>
+    function menuClick(){
+        if(!document.getElementById("first").classList.contains("show1")){
+            document.getElementById("first").classList.add("show1");
+            document.getElementById("second").classList.add("show2");
+            document.getElementById("third").classList.add("show3");
+        }else{
+            document.getElementById("first").classList.remove("show1");
+            document.getElementById("second").classList.remove("show2");
+            document.getElementById("third").classList.remove("show3");
+        }
+    }
+</script>
+</html>
