@@ -1,0 +1,10 @@
+/* CSS for ExternalCSS.html */
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: red;
+    margin-left: 120px;
+    font-size: 10px;
+}
