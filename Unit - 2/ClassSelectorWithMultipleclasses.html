@@ -1,0 +1,36 @@
+<!-- Tag having multiple classes -->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		.center {
+			text-align: center;
+			color: red;
+		}
+
+		p.large {
+			font-size: 300%;
+		}
+
+		span.fontstyle {
+			font-size: xx-large;
+			font-stretch: wider;
+		}
+
+		span.fontcolr {
+			background-color: rgb(0, 9, 128);
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 class="center">This heading will not be affected</h1>
+	<p class="center">This paragraph will be red and center-aligned.</p>
+	<p class="center">This paragraph will be red, center-aligned, and in a large font-size.</p>
+	<!-- .center wont affect span because span is a inline element, text-align only works on block element -->
+	<span class="center fontcolr fontstyle">This span element paragraph</span>
+</body>
+
+</html>
