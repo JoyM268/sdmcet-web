@@ -1,0 +1,55 @@
+<!-- 
+    Develop and validate a web page using HTML markup that collects a student's name and roll number. 
+    Write JavaScript to validate the user's input to check for both the completeness of the form (is everything filled out?)
+    and the format of the data(is the roll number only numbers?).The form should display proper messages for all types of 
+    validations. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form action="" onsubmit="return validate()">
+        <table>
+            <tr>
+                <td><label>Enter the student name:</label></td>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td><label>Enter the roll number:</label></td>
+                <td><input type="text" id="rollno"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script type="text/javascript">
+    function validate(){
+        var name = document.getElementById("name").value;
+        var rollno = document.getElementById("rollno").value;
+        var rollReg = /^[0-9]*$/;
+        var nameReg = /^[A-Za-z\s]*$/;
+        if(name == ""){
+            alert("Please enter the name.");
+            return false;
+        }else if(!name.match(nameReg)){
+            alert("Name should only contain alphabets and spaces."); 
+            return false;
+        }else if(rollno == ""){
+            alert("Please enter the roll number.");
+            return false;
+        }else if(!rollno.match(rollReg)){
+            alert("Roll number should only contain numbers.");
+            return false;
+        }
+        return true;
+    }
+</script>
+</html>

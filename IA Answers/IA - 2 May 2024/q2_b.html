@@ -1,0 +1,40 @@
+<!--
+    Write HTML markup to design a web page that allows users to input a maximum number 'N'
+    (Example: if N=3, N values will be 1, 2, 3) and select between two options using radio buttons:
+    'Average' and 'Sum'. Upon clicking either of these options, the page should compute the corresponding
+    operation and display the result with the appropriate label.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average and Sum</title>
+</head>
+<body>
+    <label>Enter the value of N:</label>
+    <input type="text" id="N"><br>
+    <input type="radio" onclick="average()" name="rdbtn">Average
+    <input type="radio" onclick="sum()" name="rdbtn">Sum<br>
+    <label id="ans"></label>
+</body>
+<script type="text/javascript">
+    function sum(){
+        var n = parseInt(document.getElementById("N").value);
+        var sum = 0;
+        for(var i = 1; i <= n; i++){
+            sum += i;
+        }
+        document.getElementById("ans").innerHTML = "Sum: <b>" + sum + "</b>"; 
+    }
+
+    function average(){
+        var n = parseInt(document.getElementById("N").value);
+        var sum = 0;
+        for(var i = 1; i <= n; i++){
+            sum += i;
+        }
+        document.getElementById("ans").innerHTML = "Average: <b>" + (sum/n) + "</b>"; 
+    }
+</script>
+</html>
