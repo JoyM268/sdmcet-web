@@ -1,0 +1,15 @@
+{
+    "Students":
+    [
+        {
+            "Roll_No": 111,
+            "Name": "Jumaane",
+            "CGPA": 9.12
+        },
+        {
+            "Roll_No": 222,
+            "Name": "John",
+            "CGPA": 7.23
+        }
+    ]
+}
