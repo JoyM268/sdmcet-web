@@ -1,0 +1,24 @@
+<!-- 
+    Write an HTML markup to create a web page that allows users to select three of your favourite computer science subjects using checkboxes.
+    When the user submits their choices, a php script will process the selection and display the choosen subjects in tabular format.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox</title>
+</head>
+<body>
+    <form action="q1_a.php" method="post">
+        <label>Select your favourite subjects:</label><br>
+        <input type="checkbox" name="chk[]" value="PCPI">PCPI<br>
+        <input type="checkbox" name="chk[]" value="Web Tech">Web Tech<br>
+        <input type="checkbox" name="chk[]" value="OOP">OOP<br>
+        <input type="checkbox" name="chk[]" value="ADA">ADA<br>
+        <input type="checkbox" name="chk[]" value="OS">OS<br>
+        <input type="checkbox" name="chk[]" value="DSA">DSA<br>
+        <input type="submit" value="Submit"><br>
+    </form>
+</body>
+</html>
