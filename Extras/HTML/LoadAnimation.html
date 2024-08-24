@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Animation</title>
+    <style>
+        html{
+            height: 100%;
+        }
+
+        body{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #load-icon{
+            border: 8px solid rgb(223, 223, 223);
+            border-top: 8px solid blue;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            animation: loading 2s linear infinite;
+        }
+
+        @keyframes loading {
+            from{
+                rotate: 0deg;
+            }to{
+                rotate: 360deg;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="load-icon"></div>
+</body>
+</html>

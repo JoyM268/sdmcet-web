@@ -1,0 +1,59 @@
+:root{
+    --blue: rgb(23, 23, 247);
+    --border-blue: rgb(30, 30, 178);
+    --red: rgb(243, 18, 18);
+    --yellow: rgb(243, 243, 43);
+    --green: #04aa6d;
+    --border-green: #0c6242;
+    --white: #ffffff;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#board{
+    height: 540px;
+    width: 630px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--blue);
+    border: 10px solid var(--border-blue);
+}
+
+.tile {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: var(--white);
+    margin: 5px;
+    border: 5px solid var(--border-blue);
+    cursor: pointer;
+}
+
+.red-piece{
+    background-color: var(--red);
+}
+
+.yellow-piece{
+    background-color: var(--yellow);
+}
+
+#restart-button{
+    margin: 15px;
+    background-color: var(--green);
+    width: 85px;
+    height: 40px;
+    border-radius: 10px;
+    color: var(--white);
+    border: 1px solid var(--border-green);
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+#restart-button:hover{
+    opacity: 0.9;
+    scale: 1.03;
+}
