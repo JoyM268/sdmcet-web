@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            animation-name: move;
+            animation-duration: 5s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes move {
+            0% {
+                left: 10px;
+                top: 10px;
+                border-radius: 0%;
+                background-color: crimson;
+                rotate: 0deg;
+            }
+
+            25% {
+                left: calc(100% - 210px);
+                top: 10px;
+                border-radius: 25%;
+                background-color: orchid;
+            }
+
+            50% {
+                left: calc(100% - 210px);
+                top: calc(100% - 210px);
+                border-radius: 50%;
+                background-color: greenyellow;
+            }
+
+            75% {
+                left: 10px;
+                top: calc(100% - 210px);
+                border-radius: 25%;
+                background-color: aqua;
+            }
+
+            100% {
+                left: 10px;
+                top: 10px;
+                border-radius: 0%;
+                background-color: darkcyan;
+                rotate: 360deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

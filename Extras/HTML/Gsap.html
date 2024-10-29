@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP</title>
+    <style>
+        * {
+            background-color: black;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 0px;
+        }
+
+        #box1 {
+            left: 10px;
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: rgb(17, 0, 255);
+        }
+
+        #box2 {
+            position: absolute;
+            left: 10px;
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <h1 style="margin-top: 200px;">Hello</h1>
+    <h1>My Name is</h1>
+    <h1>Joy</h1>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    gsap.to("#box1", {
+        left: "calc(100% - 110px)",
+        duration: 2,
+        delay: 1,
+        backgroundColor: "red",
+        borderRadius: "50%",
+        rotate: 360,
+        repeat: -1,
+        yoyo: true
+    });
+
+    gsap.from("#box2", {
+        left: "calc(100% - 110px)",
+        delay: 1,
+        duration: 2,
+        backgroundColor: "red",
+        borderRadius: "50%",
+        rotate: 360,
+        repeat: -1,
+        yoyo: true,
+    })
+
+    gsap.from("h1", {
+        opacity: 0,
+        duration: 1,
+        y: 100,
+        delay: 1,
+        stagger: 0.2
+    })
+
+</script>
+
+</html>

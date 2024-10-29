@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+</head>
+
+<body>
+    <div style="justify-content: center; width: 100%; display: flex; margin-top: 30px;">
+        <input type="text" id="item" style="height: 25px;" />
+        <button onclick="add()" style="cursor: pointer;">Add</button>
+    </div>
+    <div style="display: flex; column-gap: 10px; justify-content: center; margin-top: 50px;">
+        <div id="box1" style="height: 500px; width: 300px; border: 1px solid black;  padding: 20px;"
+            ondragover="onDrag(event)" ondrop="onDrop(event)">
+        </div>
+        <br />
+        <div id="box2" style="height: 500px; width: 300px; border: 1px solid black; padding: 20px;"
+            ondragover="onDrag(event)" ondrop="onDrop(event)"></div>
+        <br />
+        <div id="box3" style="height: 500px; width: 300px; border: 1px solid black; padding: 20px;"
+            ondragover="onDrag(event)" ondrop="onDrop(event)"></div>
+    </div>
+</body>
+
+<script>
+    function drag(e) {
+        e.dataTransfer.setData("text", e.target.id);
+    }
+
+    function onDrag(e) {
+        e.preventDefault();
+    }
+
+    function onDrop(e) {
+        e.preventDefault();
+        let data = e.dataTransfer.getData("text");
+        e.target.appendChild(document.getElementById(data));
+    }
+
+    function add() {
+        let text = document.getElementById("item").value;
+
+        let newItem = document.createElement("div");
+        newItem.id = "item" + Date.now();
+        newItem.style.fontSize = "18px";
+        newItem.style.fontWeight = "bold";
+        newItem.style.cursor = "pointer";
+        newItem.draggable = true;
+        newItem.innerText = text;
+        newItem.ondragstart = drag;
+        document.getElementById("item").value = "";
+        document.getElementById("box1").appendChild(newItem);
+
+    }
+</script>
+
+</html>
